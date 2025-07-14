@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 @import './styles/theme.css';
 @import './styles/responsive.css';
 @import './styles/modal.css';
 
 /* Additional global styles can go here */
 
+=======
+>>>>>>> d99a617726b38bedbf3e3f2ca9189a274dab6659
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
