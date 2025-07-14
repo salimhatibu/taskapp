@@ -30,12 +30,12 @@ function App() {
     <AuthProvider>
       <CartProvider>
         <DataProvider>
-          <Router>
+    <Router>
             <TopBar />
             <div style={{ display: 'flex' }}>
               {isAdminRoute && <SideBar />}
               <div style={{ flex: 1, marginLeft: isAdminRoute ? 220 : 0, padding: '2rem 1rem' }}>
-                <Routes>
+          <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
@@ -51,10 +51,10 @@ function App() {
                   <Route path="/admin/categories" element={<ProtectedRoute adminOnly={true}><AdminCategories /></ProtectedRoute>} />
                   <Route path="/admin/reports" element={<ProtectedRoute adminOnly={true}><AdminReports /></ProtectedRoute>} />
                   <Route path="*" element={<NotFound />} />
-                </Routes>
+          </Routes>
               </div>
-            </div>
-          </Router>
+      </div>
+    </Router>
         </DataProvider>
       </CartProvider>
     </AuthProvider>
