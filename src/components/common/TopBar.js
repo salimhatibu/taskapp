@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 const TopBar = () => {
@@ -17,20 +17,20 @@ const TopBar = () => {
       background: 'var(--color-card)', padding: '1rem 2rem', boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-        <Link to="/" style={{ fontWeight: 700, fontSize: '1.3rem', color: 'var(--color-accent)' }}>Bookstore</Link>
-        <Link to="/books">Books</Link>
-        {isAuthenticated && !isAdmin && <Link to="/cart">Cart</Link>}
-        {isAuthenticated && !isAdmin && <Link to="/orders">Orders</Link>}
+        <NavLink to="/" style={({ isActive }) => ({ fontWeight: 700, fontSize: '1.3rem', color: 'var(--color-accent)', textDecoration: isActive ? 'underline' : 'none' })}>Bookstore</NavLink>
+        <NavLink to="/books" className={({ isActive }) => isActive ? 'active' : ''}>Books</NavLink>
+        {isAuthenticated && !isAdmin && <NavLink to="/cart" className={({ isActive }) => isActive ? 'active' : ''}>Cart</NavLink>}
+        {isAuthenticated && !isAdmin && <NavLink to="/orders" className={({ isActive }) => isActive ? 'active' : ''}>Orders</NavLink>}
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {isAuthenticated && !isAdmin && <Link to="/profile">{user?.name || 'Profile'}</Link>}
-        {isAuthenticated && isAdmin && <Link to="/admin/dashboard">Admin</Link>}
+        {isAuthenticated && !isAdmin && <NavLink to="/profile" className={({ isActive }) => isActive ? 'active' : ''}>{user?.name || 'Profile'}</NavLink>}
+        {isAuthenticated && isAdmin && <NavLink to="/admin/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>Admin</NavLink>}
         {isAuthenticated ? (
           <button className="btn" onClick={handleLogout}>Logout</button>
         ) : (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <NavLink to="/login" className={({ isActive }) => isActive ? 'active' : ''}>Login</NavLink>
+            <NavLink to="/register" className={({ isActive }) => isActive ? 'active' : ''}>Register</NavLink>
           </>
         )}
       </div>

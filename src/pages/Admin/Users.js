@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useData } from '../../context/DataContext';
 import { Button, Modal, Input } from '../../components/common';
+import Toast from '../../components/common/Toast';
 
 const emptyUser = { name: '', email: '', password: '', role: 'user' };
 
@@ -10,6 +11,8 @@ const AdminUsers = () => {
   const [editUser, setEditUser] = useState(null);
   const [form, setForm] = useState(emptyUser);
   const [deleteId, setDeleteId] = useState(null);
+  const [search, setSearch] = useState('');
+  const [toast, setToast] = useState({ message: '', type: 'success' });
 
   const openAdd = () => {
     setForm(emptyUser);
@@ -36,12 +39,14 @@ const AdminUsers = () => {
       const updated = users.map(u => u.id === editUser.id ? { ...editUser, ...form } : u);
       setUsers(updated);
       window.localStorage.setItem('users', JSON.stringify(updated));
+      setToast({ message: 'User updated successfully!', type: 'success' });
     } else {
       // Add
       const newUser = { ...form, id: Date.now(), createdAt: Date.now() };
       const updated = [...users, newUser];
       setUsers(updated);
       window.localStorage.setItem('users', JSON.stringify(updated));
+      setToast({ message: 'User added successfully!', type: 'success' });
     }
     closeModal();
   };
@@ -51,39 +56,54 @@ const AdminUsers = () => {
     setUsers(updated);
     window.localStorage.setItem('users', JSON.stringify(updated));
     setDeleteId(null);
+    setToast({ message: 'User deleted successfully!', type: 'success' });
   };
+
+  const filteredUsers = users.filter(u =>
+    u.name.toLowerCase().includes(search.toLowerCase()) ||
+    u.email.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <div className="admin-users-page card" style={{ maxWidth: 900, margin: '2rem auto' }}>
       <h2>Manage Users</h2>
+      <input
+        type="text"
+        placeholder="Search users by name or email..."
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+        style={{ width: '100%', maxWidth: 300, marginBottom: 16, padding: 8, borderRadius: 6, border: '1px solid var(--color-border)' }}
+      />
       <Button style={{ marginBottom: 16 }} onClick={openAdd}>Add User</Button>
-      <table style={{ width: '100%' }}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Created</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.role}</td>
-              <td>{new Date(user.createdAt).toLocaleDateString()}</td>
-              <td>
-                <Button onClick={() => openEdit(user)}>Edit</Button>
-                <Button style={{ marginLeft: 8, background: 'var(--color-secondary)' }} onClick={() => confirmDelete(user.id)}>Delete</Button>
-              </td>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ width: '100%', minWidth: 700 }}>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Created</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {filteredUsers.map(user => (
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>{user.role}</td>
+                <td>{new Date(user.createdAt).toLocaleDateString()}</td>
+                <td>
+                  <Button onClick={() => openEdit(user)}>Edit</Button>
+                  <Button style={{ marginLeft: 8, background: 'var(--color-secondary)' }} onClick={() => confirmDelete(user.id)}>Delete</Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <Modal isOpen={modalOpen} onClose={closeModal}>
         <h3>{editUser ? 'Edit User' : 'Add User'}</h3>
         <form onSubmit={handleSubmit}>
@@ -105,6 +125,7 @@ const AdminUsers = () => {
         <Button onClick={handleDelete}>Delete</Button>
         <Button onClick={() => setDeleteId(null)} style={{ marginLeft: 12 }}>Cancel</Button>
       </Modal>
+      <Toast message={toast.message} type={toast.type} onClose={() => setToast({ message: '', type: 'success' })} />
     </div>
   );
 };

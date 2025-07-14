@@ -60,4 +60,9 @@ a {
 }
 a:hover {
   color: var(--color-secondary);
+}
+.active {
+  color: var(--color-primary) !important;
+  text-decoration: underline !important;
+  font-weight: bold;
 } 

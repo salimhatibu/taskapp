@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 const SideBar = () => {
@@ -17,12 +17,12 @@ const SideBar = () => {
       padding: '2rem 1rem', boxShadow: '2px 0 8px rgba(0,0,0,0.08)',
       display: 'flex', flexDirection: 'column', gap: '1.5rem', position: 'fixed', left: 0, top: 0, zIndex: 100
     }}>
-      <Link to="/admin/dashboard" style={{ fontWeight: 700, fontSize: '1.2rem', color: 'var(--color-accent)' }}>Admin Panel</Link>
-      <Link to="/admin/users">Users</Link>
-      <Link to="/admin/books">Books</Link>
-      <Link to="/admin/orders">Orders</Link>
-      <Link to="/admin/categories">Categories</Link>
-      <Link to="/admin/reports">Reports</Link>
+      <NavLink to="/admin/dashboard" style={({ isActive }) => ({ fontWeight: 700, fontSize: '1.2rem', color: 'var(--color-accent)', textDecoration: isActive ? 'underline' : 'none' })}>Admin Panel</NavLink>
+      <NavLink to="/admin/users" className={({ isActive }) => isActive ? 'active' : ''}>Users</NavLink>
+      <NavLink to="/admin/books" className={({ isActive }) => isActive ? 'active' : ''}>Books</NavLink>
+      <NavLink to="/admin/orders" className={({ isActive }) => isActive ? 'active' : ''}>Orders</NavLink>
+      <NavLink to="/admin/categories" className={({ isActive }) => isActive ? 'active' : ''}>Categories</NavLink>
+      <NavLink to="/admin/reports" className={({ isActive }) => isActive ? 'active' : ''}>Reports</NavLink>
       <button className="btn" onClick={handleLogout} style={{ marginTop: '2rem' }}>Logout</button>
     </aside>
   );
