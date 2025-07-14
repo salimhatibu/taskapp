@@ -1,0 +1,102 @@
+.books-page {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-container h2 {
+  text-align: center;
+  color: #f0f6fc;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.book-card {
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: #21262d;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  border-color: #484f58;
+  background: #2d333b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.book-image {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  border: 1px solid #30363d;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f6fc;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.book-author {
+  color: #8b949e;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.book-genre {
+  color: #656d76;
+  font-size: 0.85rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.book-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7ee787;
+  margin: 0;
+}
+
+.view-details-btn {
+  background-color: #238636;
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  display: inline-block;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #2ea043;
+}
+
+.view-details-btn:hover {
+  background-color: #2ea043;
+  border-color: #3fb950;
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Magenta</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="../index.html">
+                        <i class="fas fa-book-open"></i>
+                        <span>Magenta</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link">Categories <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="category.html?cat=fiction">Fiction</a></li>
+                                <li><a href="category.html?cat=non-fiction">Non-Fiction</a></li>
+                                <li><a href="category.html?cat=sci-fi">Science Fiction</a></li>
+                                <li><a href="category.html?cat=mystery">Mystery & Thriller</a></li>
+                                <li><a href="category.html?cat=romance">Romance</a></li>
+                                <li><a href="category.html?cat=biography">Biography</a></li>
+                                <li><a href="category.html?cat=history">History</a></li>
+                                <li><a href="category.html?cat=self-help">Self-Help</a></li>
+                                <li><a href="category.html?cat=business">Business</a></li>
+                                <li><a href="category.html?cat=technology">Technology</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bestsellers.html" class="nav-link">Bestsellers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="deals.html" class="nav-link">Deals</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search books, authors...">
+                        <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="user-actions">
+                        <a href="wishlist.html" class="action-btn" title="Wishlist">
+                            <i class="fas fa-heart"></i>
+                            <span class="badge" id="wishlistCount">0</span>
+                        </a>
+                        <a href="cart.html" class="action-btn" title="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge" id="cartCount">0</span>
+                        </a>
+                        <div class="user-menu">
+                            <button class="user-btn" id="userBtn">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <div class="user-dropdown" id="userDropdown">
+                                <a href="login.html" id="loginLink">Login</a>
+                                <a href="register.html" id="registerLink">Register</a>
+                                <a href="profile.html" id="profileLink" style="display: none;">My Profile</a>
+                                <a href="orders.html" id="ordersLink" style="display: none;">My Orders</a>
+                                <a href="#" id="logoutLink" style="display: none;">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" style="background:linear-gradient(135deg,#23243a 0%,#2d2e4a 100%);padding:4rem 0 2.5rem 0;box-shadow:0 8px 32px rgba(102,126,234,0.10);">
+      <div class="container" style="max-width:1100px;">
+        <div class="hero-content" style="text-align:center;">
+          <h1 style="font-size:2.7rem;font-weight:800;color:#fff;margin-bottom:0.7rem;">About Magenta</h1>
+          <p style="color:#b0b0b0;font-size:1.2rem;margin-bottom:2rem;">Your trusted partner in the world of literature, connecting readers with stories that inspire, educate, and entertain.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" style="background:linear-gradient(135deg,#181a20 0%,#23243a 100%);padding:3rem 0 2rem 0;">
+      <div class="container" style="max-width:1100px;">
+        <div class="page-header" style="margin-bottom:2.5rem;">
+          <nav class="breadcrumb" style="color:#b0b0b0;font-size:1rem;">
+            <a href="../index.html" style="color:#67eaff;text-decoration:none;">Home</a>
+            <i class="fas fa-chevron-right" style="margin:0 0.5rem;"></i>
+            <span>About Us</span>
+          </nav>
+        </div>
+        <!-- Our Story -->
+        <div class="about-story" style="display:flex;gap:2.5rem;align-items:center;flex-wrap:wrap;background:rgba(30,32,44,0.95);border-radius:18px;box-shadow:0 4px 24px rgba(102,126,234,0.08);padding:2.5rem 2rem;margin-bottom:2.5rem;">
+          <div class="story-content" style="flex:2;min-width:270px;">
+            <h2 style="color:#fff;font-size:2rem;font-weight:700;margin-bottom:1.2rem;">Our Story</h2>
+            <p style="color:#b0b0b0;">Founded in 2010, Magenta began as a small local bookstore with a big dream: to make quality literature accessible to everyone. What started as a single storefront has grown into one of the most trusted online book retailers, serving millions of readers worldwide.</p>
+            <p style="color:#b0b0b0;">Our journey has been driven by a passion for books and a commitment to connecting readers with stories that matter. We believe that every book has the power to change lives, expand horizons, and bring people together.</p>
+            <div class="story-stats" style="display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem;">
+              <div class="stat-item" style="background:rgba(102,126,234,0.10);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;min-width:110px;">
+                <h3 style="color:#67eaff;font-size:2rem;font-weight:700;">14+</h3>
+                <p style="color:#b0b0b0;font-size:1rem;">Years of Service</p>
+              </div>
+              <div class="stat-item" style="background:rgba(102,126,234,0.10);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;min-width:110px;">
+                <h3 style="color:#67eaff;font-size:2rem;font-weight:700;">1M+</h3>
+                <p style="color:#b0b0b0;font-size:1rem;">Happy Customers</p>
+              </div>
+              <div class="stat-item" style="background:rgba(102,126,234,0.10);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;min-width:110px;">
+                <h3 style="color:#67eaff;font-size:2rem;font-weight:700;">500K+</h3>
+                <p style="color:#b0b0b0;font-size:1rem;">Books Delivered</p>
+              </div>
+              <div class="stat-item" style="background:rgba(102,126,234,0.10);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;min-width:110px;">
+                <h3 style="color:#67eaff;font-size:2rem;font-weight:700;">50K+</h3>
+                <p style="color:#b0b0b0;font-size:1rem;">Book Titles</p>
+              </div>
+            </div>
+          </div>
+          <div class="story-image" style="flex:1;min-width:220px;text-align:center;">
+            <img src="../images/about-story.jpg" alt="Our Story" style="max-width:100%;border-radius:16px;box-shadow:0 8px 32px rgba(102,126,234,0.10);">
+          </div>
+        </div>
+        <!-- Mission & Values -->
+        <div class="mission-values" style="display:flex;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+          <div class="mission-section" style="flex:1;min-width:270px;background:rgba(40,42,60,0.7);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+            <div class="mission-content">
+              <h2 style="color:#fff;font-size:1.5rem;font-weight:700;margin-bottom:1rem;">Our Mission</h2>
+              <p style="color:#b0b0b0;">To inspire a love of reading by providing access to the world's best literature, fostering a community of passionate readers, and supporting authors and publishers in their creative endeavors.</p>
+              <div class="mission-points" style="display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1.5rem;">
+                <div class="point" style="flex:1;min-width:120px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                  <i class="fas fa-book" style="color:#67eaff;font-size:1.5rem;"></i>
+                  <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Curate Quality</h4>
+                  <p style="color:#b0b0b0;font-size:0.98rem;">Carefully select books that meet our high standards for content and quality.</p>
+                </div>
+                <div class="point" style="flex:1;min-width:120px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                  <i class="fas fa-users" style="color:#67eaff;font-size:1.5rem;"></i>
+                  <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Build Community</h4>
+                  <p style="color:#b0b0b0;font-size:0.98rem;">Create spaces for readers to connect, share, and discover new stories together.</p>
+                </div>
+                <div class="point" style="flex:1;min-width:120px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                  <i class="fas fa-globe" style="color:#67eaff;font-size:1.5rem;"></i>
+                  <h4 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Promote Literacy</h4>
+                  <p style="color:#b0b0b0;font-size:0.98rem;">Support reading initiatives and make books accessible to all communities.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="values-section" style="flex:1;min-width:270px;background:rgba(40,42,60,0.7);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+            <h2 style="color:#fff;font-size:1.5rem;font-weight:700;margin-bottom:1rem;">Our Values</h2>
+            <div class="values-grid" style="display:flex;flex-wrap:wrap;gap:1.2rem;">
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-heart" style="color:#e74c3c;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Passion for Reading</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We're driven by our love for books and the stories they contain.</p>
+              </div>
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-handshake" style="color:#67eaff;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Integrity</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We conduct business with honesty, transparency, and ethical practices.</p>
+              </div>
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-star" style="color:#ffd700;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Excellence</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We strive for excellence in every aspect of our service and operations.</p>
+              </div>
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-lightbulb" style="color:#fbc02d;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Innovation</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We embrace new technologies and ideas to better serve our customers.</p>
+              </div>
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-hands-helping" style="color:#2bff05;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Community</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We support and contribute to the communities we serve.</p>
+              </div>
+              <div class="value-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+                <div class="value-icon"><i class="fas fa-leaf" style="color:#43a047;font-size:1.5rem;"></i></div>
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Sustainability</h3>
+                <p style="color:#b0b0b0;font-size:0.98rem;">We're committed to environmental responsibility and sustainable practices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Team Section -->
+        <div class="team-section" style="background:rgba(30,32,44,0.95);border-radius:18px;box-shadow:0 4px 24px rgba(102,126,234,0.08);padding:2.5rem 2rem;margin-bottom:2.5rem;">
+          <h2 style="color:#fff;font-size:2rem;font-weight:700;margin-bottom:1.2rem;text-align:center;">Meet Our Team</h2>
+          <p class="team-intro" style="color:#b0b0b0;text-align:center;max-width:700px;margin:0 auto 2.5rem auto;">Our dedicated team of book lovers, technology experts, and customer service professionals work together to bring you the best reading experience possible.</p>
+          <div class="team-grid" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+            <div class="team-member" style="background:rgba(102,126,234,0.10);border-radius:14px;padding:1.5rem;min-width:220px;max-width:260px;text-align:center;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+              <div class="member-photo" style="margin-bottom:1rem;"><img src="../images/team-ceo.jpg" alt="Sarah Johnson" style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(102,126,234,0.10);"></div>
+              <div class="member-info">
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin-bottom:0.2rem;">Sarah Johnson</h3>
+                <p class="member-title" style="color:#67eaff;font-size:0.98rem;margin-bottom:0.5rem;">CEO & Founder</p>
+                <p class="member-bio" style="color:#b0b0b0;font-size:0.95rem;">A lifelong book lover with 20+ years in the publishing industry. Sarah founded Magenta with a vision to democratize access to quality literature.</p>
+                <div class="member-social" style="margin-top:0.7rem;display:flex;gap:0.7rem;justify-content:center;">
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member" style="background:rgba(102,126,234,0.10);border-radius:14px;padding:1.5rem;min-width:220px;max-width:260px;text-align:center;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+              <div class="member-photo" style="margin-bottom:1rem;"><img src="../images/team-cto.jpg" alt="Michael Chen" style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(102,126,234,0.10);"></div>
+              <div class="member-info">
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin-bottom:0.2rem;">Michael Chen</h3>
+                <p class="member-title" style="color:#67eaff;font-size:0.98rem;margin-bottom:0.5rem;">Chief Technology Officer</p>
+                <p class="member-bio" style="color:#b0b0b0;font-size:0.95rem;">Technology enthusiast who believes in using innovation to enhance the reading experience and make books more accessible to everyone.</p>
+                <div class="member-social" style="margin-top:0.7rem;display:flex;gap:0.7rem;justify-content:center;">
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member" style="background:rgba(102,126,234,0.10);border-radius:14px;padding:1.5rem;min-width:220px;max-width:260px;text-align:center;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+              <div class="member-photo" style="margin-bottom:1rem;"><img src="../images/team-curator.jpg" alt="Emily Rodriguez" style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(102,126,234,0.10);"></div>
+              <div class="member-info">
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin-bottom:0.2rem;">Emily Rodriguez</h3>
+                <p class="member-title" style="color:#67eaff;font-size:0.98rem;margin-bottom:0.5rem;">Head of Curation</p>
+                <p class="member-bio" style="color:#b0b0b0;font-size:0.95rem;">Former librarian with a Master's in Literature. Emily ensures our collection represents diverse voices and high-quality content.</p>
+                <div class="member-social" style="margin-top:0.7rem;display:flex;gap:0.7rem;justify-content:center;">
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-member" style="background:rgba(102,126,234,0.10);border-radius:14px;padding:1.5rem;min-width:220px;max-width:260px;text-align:center;box-shadow:0 2px 8px rgba(102,126,234,0.05);">
+              <div class="member-photo" style="margin-bottom:1rem;"><img src="../images/team-customer.jpg" alt="David Thompson" style="width:90px;height:90px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(102,126,234,0.10);"></div>
+              <div class="member-info">
+                <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin-bottom:0.2rem;">David Thompson</h3>
+                <p class="member-title" style="color:#67eaff;font-size:0.98rem;margin-bottom:0.5rem;">Customer Experience Director</p>
+                <p class="member-bio" style="color:#b0b0b0;font-size:0.95rem;">Passionate about creating exceptional customer experiences and building lasting relationships with our community of readers.</p>
+                <div class="member-social" style="margin-top:0.7rem;display:flex;gap:0.7rem;justify-content:center;">
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" style="color:#67eaff;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Awards & Recognition -->
+        <div class="awards-section" style="background:rgba(40,42,60,0.7);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 2px 8px rgba(102,126,234,0.05);margin-bottom:2.5rem;">
+          <h2 style="color:#fff;font-size:1.5rem;font-weight:700;margin-bottom:1.2rem;text-align:center;">Awards & Recognition</h2>
+          <div class="awards-grid" style="display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;">
+            <div class="award-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+              <div class="award-icon"><i class="fas fa-trophy" style="color:#ffd700;font-size:1.5rem;"></i></div>
+              <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Best Online Magenta 2023</h3>
+              <p style="color:#b0b0b0;font-size:0.98rem;">Book Industry Association</p>
+            </div>
+            <div class="award-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+              <div class="award-icon"><i class="fas fa-medal" style="color:#e74c3c;font-size:1.5rem;"></i></div>
+              <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Customer Service Excellence</h3>
+              <p style="color:#b0b0b0;font-size:0.98rem;">Retail Excellence Awards</p>
+            </div>
+            <div class="award-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+              <div class="award-icon"><i class="fas fa-star" style="color:#ffd700;font-size:1.5rem;"></i></div>
+              <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Top Rated E-commerce Site</h3>
+              <p style="color:#b0b0b0;font-size:0.98rem;">Consumer Choice Awards</p>
+            </div>
+            <div class="award-card" style="flex:1 1 180px;background:rgba(102,126,234,0.10);border-radius:10px;padding:1rem;text-align:center;">
+              <div class="award-icon"><i class="fas fa-award" style="color:#43a047;font-size:1.5rem;"></i></div>
+              <h3 style="color:#fff;font-size:1.1rem;font-weight:600;margin:0.7rem 0 0.3rem 0;">Environmental Responsibility</h3>
+              <p style="color:#b0b0b0;font-size:0.98rem;">Green Business Awards</p>
+            </div>
+          </div>
+        </div>
+        <!-- Call to Action -->
+        <div class="about-cta" style="background:linear-gradient(135deg,#6a82fb 0%,#fc5c7d 100%);border-radius:18px;padding:2.5rem 2rem;text-align:center;box-shadow:0 8px 32px rgba(106,130,251,0.10);margin-bottom:2.5rem;">
+          <div class="cta-content">
+            <h2 style="color:#fff;font-size:2rem;font-weight:700;margin-bottom:1.2rem;">Join Our Community</h2>
+            <p style="color:#fff;font-size:1.1rem;margin-bottom:2rem;">Become part of our growing community of book lovers and discover your next favorite read.</p>
+            <div class="cta-buttons" style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;">
+              <a href="register.html" class="btn btn-primary btn-browse">Create Account</a>
+              <a href="contact.html" class="btn btn-cta-secondary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Magenta</h3>
+                    <p>Your trusted source for quality books and exceptional reading experiences.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +254123456789</p>
+                        <p><i class="fas fa-envelope"></i> info@Magenta.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Magenta. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof ShoppingCart !== 'undefined') {
+          window.cart = new ShoppingCart();
+          window.cart.updateCartDisplay();
+        }
+      });
+    </script>
+</body>
+</html> 
