@@ -27,12 +27,14 @@ Task App is a web platform for our book club. Members can:
 ```bash
 git clone https://github.com/<your-org>/taskapp.git
 cd taskapp/backend
-
+```
 2. Install Dependencies
+```
 composer install
 npm install && npm run dev
-
+```
 3. Configure Environment
+```
 Copy `.env.example` to `.env`
 cp .env.example .env
 Update values in `.env`:
@@ -51,16 +53,16 @@ MAIL_PASSWORD=your-smtp-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=taskapp@example.com
 MAIL_FROM_NAME="Task App"
-
+```
 4. Run Database Migrations
-php artisan migrate
+```php artisan migrate```
 
 5. Start Local Server
-php artisan serve
+```php artisan serve```
 Visit: http://localhost:8000
 🧪 Running Tests
 Run Laravel tests:
-php artisan test
+```php artisan test```
 🌱 Sprint Deliverables
 - Sprint 1: Repo setup, server setup manual, ≥7 commits
 - Sprint 2: Authentication + 2FA
