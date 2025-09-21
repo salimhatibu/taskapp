@@ -55,14 +55,22 @@ MAIL_FROM_ADDRESS=taskapp@example.com
 MAIL_FROM_NAME="Task App"
 ```
 4. Run Database Migrations
-```php artisan migrate```
+```
+php artisan migrate
+```
 
 5. Start Local Server
-```php artisan serve```
+```
+php artisan serve
+```
 Visit: http://localhost:8000
+
 🧪 Running Tests
 Run Laravel tests:
-```php artisan test```
+```
+php artisan test
+```
+
 🌱 Sprint Deliverables
 - Sprint 1: Repo setup, server setup manual, ≥7 commits
 - Sprint 2: Authentication + 2FA
@@ -73,7 +81,9 @@ Run Laravel tests:
 
 👥 Contributors
 - Salim Hatibu & Ehlert Moracha
-ICS Group Project (Strathmore University)
+
+  ICS Group Project (Strathmore University)
 
 📄 License
-Educational use only. Not for commercial deployment.
+
+    Educational use only. Not for commercial deployment.
