@@ -1,24 +1,31 @@
-README - Task App
+# 📚 Task App
+
 Task App is a web platform for our book club. Members can:
 - Register and log in securely
-- Verify their identity with 2-Factor Authentication (2FA)
+- Verify their identity with **2-Factor Authentication (2FA)**
 - Download and purchase books (M-Pesa integration)
 - Fill in forms and surveys
 - Join chat groups
 - Review books, ask questions, and share notes
 
-🚀 Tech Stack
-- PHP 8.2+ (Laravel 10 Framework)
-- MariaDB
-- Apache (local dev server)
-- Tailwind CSS / Bootstrap (frontend styling)
-- Laravel Echo + Pusher (for chat)
-- Safaricom Daraja API (M-Pesa payments)
-- Mailtrap / Gmail SMTP (email testing & 2FA)
+---
 
-⚙️ Setup Instructions
-1. Clone the Repository
-git clone https://github.com/salimhatibu/taskapp.git
+## 🚀 Tech Stack
+- **PHP 8.2+** (Laravel 10 Framework)
+- **MariaDB**
+- **Apache** (local dev server)
+- **Tailwind CSS** / Bootstrap (frontend styling)
+- **Laravel Echo + Pusher** (for chat)
+- **Safaricom Daraja API** (M-Pesa payments)
+- **Mailtrap / Gmail SMTP** (email testing & 2FA)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-org>/taskapp.git
 cd taskapp/backend
 
 2. Install Dependencies
@@ -29,7 +36,7 @@ npm install && npm run dev
 Copy `.env.example` to `.env`
 cp .env.example .env
 Update values in `.env`:
-DB_CONNECTION=mysql
+DB_CONNECTION=mysql 
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=taskapp
