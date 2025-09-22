@@ -47,6 +47,7 @@
             </div>
 
             <!-- Settings Dropdown -->
+            <?php if(auth()->guard()->check()): ?>
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.dropdown','data' => ['align' => 'right','width' => '48']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
@@ -102,6 +103,7 @@
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
             </div>
+            <?php endif; ?>
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
@@ -138,6 +140,7 @@
         </div>
 
         <!-- Responsive Settings Options -->
+        <?php if(auth()->guard()->check()): ?>
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800"><?php echo e(Auth::user()->name); ?></div>
@@ -171,6 +174,7 @@
                 </form>
             </div>
         </div>
+        <?php endif; ?>
     </div>
 </nav>
 <?php /**PATH C:\xampp\htdocs\taskapp\backend\resources\views/layouts/navigation.blade.php ENDPATH**/ ?>
