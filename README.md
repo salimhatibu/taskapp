@@ -83,7 +83,7 @@ php artisan test
 
 ## 👥 Contributors
 - Salim Hatibu & Team
-- ICS Group Project (Strathmore University)
+- ICS Group Project for IAP (Strathmore University)
 
 ## 📄 License
 Educational use only. Not for commercial deployment.
